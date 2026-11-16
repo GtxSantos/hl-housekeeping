@@ -1,0 +1,501 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>HL Housekeeping Company | Limpeza Profissional para Imóveis e Residências</title>
+
+  <!-- Tailwind CSS -->
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <!-- Google Fonts: Fraunces / Merriweather (Serif forte igual ao Gamma) + Inter -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700&family=Great+Vibes&family=Inter:wght@400;500;600;700&family=Merriweather:wght@700;900&display=swap" rel="stylesheet" />
+
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            gammaGreen: '#132A23',
+            gammaRed: {
+              DEFAULT: '#E63946',
+              hover: '#D62839'
+            },
+            gammaBlue: {
+              light: '#E8F1FC',
+              card: '#F4F8FD',
+              border: '#CFE0F5'
+            },
+            cream: {
+              DEFAULT: '#FAF7F0',
+              border: '#D8C9AE'
+            },
+            navy: {
+              DEFAULT: '#111C24',
+              light: '#1C2C38'
+            },
+            gold: {
+              DEFAULT: '#C5A367',
+              dark: '#9E7D43'
+            }
+          },
+          fontFamily: {
+            sans: ['Inter', 'sans-serif'],
+            display: ['Merriweather', 'Georgia', 'serif'],
+            serifLogo: ['Cinzel', 'Georgia', 'serif'],
+            script: ['Great Vibes', 'cursive']
+          }
+        }
+      }
+    };
+  </script>
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+      color: #132A23;
+      background-color: #FFFFFF;
+      -webkit-font-smoothing: antialiased;
+    }
+
+    /* Hero Full-Width com a foto exata da sala */
+    .hero-gamma-section {
+      position: relative;
+      background-image: url('sala.avif');
+      background-size: cover;
+      background-position: center;
+      min-height: 600px;
+    }
+
+    /* Sombra suave no título dentro do card branco */
+    .gamma-heading-shadow {
+      text-shadow: 0 2px 6px rgba(19, 42, 35, 0.14);
+    }
+
+    /* Barra dupla vermelha igual ao print */
+    .double-red-bar {
+      width: 44px;
+      display: flex;
+      flex-direction: column;
+      gap: 4px;
+    }
+    .double-red-bar span {
+      display: block;
+      height: 3.5px;
+      width: 100%;
+      background-color: #E63946;
+      border-radius: 1px;
+    }
+
+    /* Barra lateral de título das seções */
+    .section-bar-title {
+      position: relative;
+      padding-left: 16px;
+    }
+    .section-bar-title::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      top: 3px;
+      bottom: 3px;
+      width: 4px;
+      background-color: #C5A367;
+      border-radius: 2px;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex flex-col">
+
+  <!-- =========================================================================
+       1. SEÇÃO HERO (PRIMEIRA SEÇÃO)
+       ========================================================================= -->
+  <header id="heroHeader" class="hero-gamma-section flex items-center justify-start px-4 sm:px-12 lg:px-20 py-16 sm:py-24">
+    <!-- Overlay sutil para leitura perfeita -->
+    <div class="absolute inset-0 bg-black/15 pointer-events-none"></div>
+
+    <!-- Card Branco Flutuante à Esquerda -->
+    <div class="relative z-10 bg-white rounded-2xl p-6 sm:p-10 max-w-[480px] w-full shadow-2xl border border-white/80">
+      <p class="text-[11px] font-bold tracking-[0.25em] text-gammaGreen/60 uppercase mb-2">
+        HOUSEKEEPING
+      </p>
+      <h1 class="font-display font-black text-[32px] sm:text-[40px] text-gammaGreen leading-[1.1] mb-4 gamma-heading-shadow">
+        HL Housekeeping Company
+      </h1>
+      <p class="text-[15px] sm:text-[16px] text-gammaGreen/85 font-medium leading-relaxed mb-4">
+        Limpeza profissional para imóveis e residências.
+      </p>
+      <p class="text-[13px] text-gammaGreen/70 font-semibold mb-6">
+        Airbnb • imóveis por temporada • residências
+      </p>
+      <a href="https://wa.me/5521990235290?text=Ol%C3%A1!%20Gostaria%20de%20solicitar%20um%20or%C3%A7amento."
+         target="_blank" rel="noopener noreferrer"
+         class="inline-block w-full text-center bg-gammaRed hover:bg-gammaRed-hover text-white font-semibold text-sm py-3.5 px-6 rounded-full shadow-md transition transform active:scale-95">
+        Solicite seu orçamento pelo WhatsApp
+      </a>
+    </div>
+  </header>
+
+  <!-- =========================================================================
+       2. SEGUNDA SEÇÃO (FUNDO AZUL CLARO + QUARTO ARRUMADO À DIREITA)
+       ========================================================================= -->
+  <section class="w-full bg-[#E8F1FC] py-16 sm:py-24 px-4 sm:px-10 lg:px-20 border-b border-[#CFE0F5]">
+    <div class="max-w-6xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+      
+      <!-- Coluna Texto -->
+      <div class="lg:col-span-6 space-y-6">
+        <div class="double-red-bar" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+
+        <h2 class="font-display font-black text-[28px] sm:text-[36px] lg:text-[42px] text-gammaGreen leading-tight">
+          Limpeza profissional para imóveis e residências
+        </h2>
+
+        <p class="text-[15px] sm:text-[16px] text-gammaGreen/85 leading-relaxed">
+          A HL Housekeeping Company oferece serviços de limpeza, preparação e organização, com atendimento alinhado às necessidades de anfitriões, proprietários e moradores.
+        </p>
+
+        <div>
+          <a href="#orcamento"
+             class="inline-block bg-gammaRed hover:bg-gammaRed-hover text-white font-semibold text-sm py-3 px-8 rounded-full shadow-md transition transform active:scale-95">
+            Peça seu orçamento
+          </a>
+        </div>
+      </div>
+
+      <!-- Coluna Foto do Quarto -->
+      <div class="lg:col-span-6 flex justify-center">
+        <div class="w-full max-w-[480px] rounded-2xl overflow-hidden shadow-xl border-4 border-white">
+          <img id="bedroomImg" src="quarto.jpg" alt="Quarto arrumado HL Housekeeping" class="w-full h-auto object-cover transform hover:scale-105 transition duration-500" />
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       3. TERCEIRA SEÇÃO: SERVIÇOS PARA AIRBNB E IMÓVEIS POR TEMPORADA
+       (Estilo exato da sua imagem com tags ESSENCIAL, COMPLETO, GESTÃO)
+       ========================================================================= -->
+  <section class="w-full bg-white py-16 sm:py-24 px-4 sm:px-10 lg:px-20 border-t border-cream-border">
+    <div class="max-w-5xl mx-auto space-y-16">
+
+      <!-- BLOCO A: SERVIÇOS PARA AIRBNB E IMÓVEIS POR TEMPORADA -->
+      <div>
+        <div class="double-red-bar mb-6" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+
+        <h2 class="font-display font-black text-[28px] sm:text-[36px] text-gammaGreen mb-12">
+          Serviços para Airbnb e imóveis por temporada
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Card 1: Essencial -->
+          <div class="bg-white rounded-xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between transition hover:shadow-md">
+            <div>
+              <span class="inline-block bg-rose-100 text-rose-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-4">
+                ESSENCIAL
+              </span>
+              <h3 class="font-display font-bold text-[20px] sm:text-[22px] text-gammaGreen leading-snug mb-3">
+                Limpeza padrão Airbnb
+              </h3>
+              <p class="text-[14.5px] text-gammaGreen/80 leading-relaxed">
+                Limpeza dos ambientes, cozinha e banheiros; arrumação de camas; troca de roupas de cama e toalhas; organização e apresentação do imóvel para a chegada do próximo hóspede.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 2: Completo (Destaque com Borda Vermelha) -->
+          <div class="bg-white rounded-xl p-7 border-2 border-gammaRed shadow-md flex flex-col justify-between transition transform hover:-translate-y-1">
+            <div>
+              <span class="inline-block bg-gammaRed text-white text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-4">
+                COMPLETO
+              </span>
+              <h3 class="font-display font-bold text-[20px] sm:text-[22px] text-gammaGreen leading-snug mb-3">
+                Turnover com vistoria e registro fotográfico
+              </h3>
+              <p class="text-[14.5px] text-gammaGreen/85 leading-relaxed">
+                Inclui a limpeza padrão, conferência visual dos ambientes e envio de fotos após a execução. Reposição de amenities conforme lista de itens e materiais previamente combinados.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card 3: Gestão -->
+          <div class="bg-white rounded-xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between transition hover:shadow-md">
+            <div>
+              <span class="inline-block bg-rose-100 text-rose-700 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-4">
+                GESTÃO
+              </span>
+              <h3 class="font-display font-bold text-[20px] sm:text-[22px] text-gammaGreen leading-snug mb-3">
+                Apoio à troca de hóspedes
+              </h3>
+              <p class="text-[14.5px] text-gammaGreen/80 leading-relaxed">
+                Alinhamento dos horários de check-out e check-in e comunicação de ocorrências identificadas durante a conferência. Tarefas e disponibilidade combinadas previamente.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+      <!-- BLOCO B: SERVIÇOS PARA RESIDÊNCIAS -->
+      <div>
+        <div class="double-red-bar mb-6" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+
+        <h2 class="font-display font-black text-[28px] sm:text-[36px] text-gammaGreen mb-12">
+          Serviços para residências
+        </h2>
+
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 lg:gap-8 items-stretch">
+          
+          <!-- Card Residencial 1 -->
+          <div class="bg-white rounded-xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between transition hover:shadow-md">
+            <div>
+              <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-4">
+                ROTINA
+              </span>
+              <h3 class="font-display font-bold text-[20px] sm:text-[22px] text-gammaGreen leading-snug mb-3">
+                Limpeza residencial de manutenção
+              </h3>
+              <p class="text-[14.5px] text-gammaGreen/80 leading-relaxed">
+                Serviço de diária para manutenção da limpeza e organização da casa, com cuidados em quartos, banheiros, cozinha e áreas de convivência, conforme as prioridades e orientações do cliente.
+              </p>
+            </div>
+          </div>
+
+          <!-- Card Residencial 2 -->
+          <div class="bg-white rounded-xl p-7 border border-gray-200 shadow-sm flex flex-col justify-between transition hover:shadow-md">
+            <div>
+              <span class="inline-block bg-amber-100 text-amber-800 text-[10px] font-bold uppercase tracking-wider px-2.5 py-1 rounded-md mb-4">
+                FLEXÍVEL
+              </span>
+              <h3 class="font-display font-bold text-[20px] sm:text-[22px] text-gammaGreen leading-snug mb-3">
+                Frequência conforme sua rotina
+              </h3>
+              <p class="text-[14.5px] text-gammaGreen/80 leading-relaxed">
+                Atendimentos semanais, quinzenais ou pontuais, conforme disponibilidade e definição prévia das tarefas da sua residência.
+              </p>
+            </div>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       4. POR QUE ESCOLHER A HL? + DEPOIMENTOS
+       ========================================================================= -->
+  <section class="w-full bg-white py-16 sm:py-20 px-4 sm:px-10 lg:px-20 border-t border-cream-border">
+    <div class="max-w-5xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-12">
+
+      <!-- Coluna Esquerda: Diferenciais -->
+      <div class="lg:col-span-6">
+        <h2 class="section-bar-title font-display font-bold text-[22px] sm:text-[26px] text-gammaGreen mb-6">
+          Por que escolher a HL?
+        </h2>
+
+        <div class="space-y-4 text-[14.5px] text-gammaGreen/90 leading-relaxed">
+          <div class="p-4 rounded-xl bg-cream/60 border border-cream-border">
+            <strong class="font-bold text-gammaGreen uppercase text-[13px] block mb-0.5">PONTUALIDADE E ORGANIZAÇÃO</strong>
+            Horários, tarefas e necessidades alinhados antes de cada atendimento.
+          </div>
+
+          <div class="p-4 rounded-xl bg-cream/60 border border-cream-border">
+            <strong class="font-bold text-gammaGreen uppercase text-[13px] block mb-0.5">DISCRIÇÃO E RESPEITO</strong>
+            Cuidado com a privacidade de moradores, famílias, hóspedes e responsáveis pelo imóvel.
+          </div>
+
+          <div class="p-4 rounded-xl bg-cream/60 border border-cream-border">
+            <strong class="font-bold text-gammaGreen uppercase text-[13px] block mb-0.5">PADRÃO DE HOTELARIA</strong>
+            Atenção à arrumação de camas, toalhas, banheiros e apresentação impecável dos ambientes.
+          </div>
+
+          <div class="p-4 rounded-xl bg-cream/60 border border-cream-border">
+            <strong class="font-bold text-gammaGreen uppercase text-[13px] block mb-0.5">FOTOS DE CONFERÊNCIA E REPOSIÇÃO</strong>
+            Registro fotográfico de retorno ao responsável e reposição de itens conforme combinado.
+          </div>
+        </div>
+      </div>
+
+      <!-- Coluna Direita: Depoimentos -->
+      <div class="lg:col-span-6">
+        <h2 class="section-bar-title font-display font-bold text-[22px] sm:text-[26px] text-gammaGreen mb-6">
+          Quem já contratou, recomenda
+        </h2>
+
+        <div class="space-y-4">
+          <div class="bg-cream/50 rounded-xl p-5 border border-cream-border shadow-sm">
+            <div class="text-gold text-sm tracking-widest mb-1.5">★★★★★</div>
+            <p class="text-[14px] text-gammaGreen/90 leading-relaxed">
+              “A diarista é bem pontual, chegou no horário conforme o combinado e terminou a limpeza de forma bem eficiente. Fiquei muito satisfeito com o serviço.”
+            </p>
+            <p class="mt-2.5 text-[12px] font-bold text-gammaGreen uppercase tracking-wide">
+              CARLOS • COPACABANA
+            </p>
+          </div>
+
+          <div class="bg-cream/50 rounded-xl p-5 border border-cream-border shadow-sm">
+            <div class="text-gold text-sm tracking-widest mb-1.5">★★★★★</div>
+            <p class="text-[14px] text-gammaGreen/90 leading-relaxed">
+              “Eu tinha medo da troca no mesmo dia. A diarista chegou no horário, deixou tudo pronto e mandou fotos antes do check-in. Minha nota subiu.”
+            </p>
+            <p class="mt-2.5 text-[12px] font-bold text-gammaGreen uppercase tracking-wide">
+              FERNANDA • ZONA SUL
+            </p>
+          </div>
+
+          <div class="bg-cream/50 rounded-xl p-5 border border-cream-border shadow-sm">
+            <div class="text-gold text-sm tracking-widest mb-1.5">★★★★★</div>
+            <p class="text-[14px] text-gammaGreen/90 leading-relaxed">
+              “Ficou tudo impecável e cheiroso, limpou coisas que nem eu via que estavam sujas. Ainda deixou um cuidado especial na sala e nos quartos que rendeu elogios.”
+            </p>
+            <p class="mt-2.5 text-[12px] font-bold text-gammaGreen uppercase tracking-wide">
+              REGINA • ZONA SUL
+            </p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       5. PEÇA SEU ORÇAMENTO + SIMULADOR RÁPIDO
+       ========================================================================= -->
+  <section id="orcamento" class="w-full bg-gammaBlue-light py-16 px-4 sm:px-10 lg:px-20 border-t border-gammaBlue-border">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center max-w-2xl mx-auto mb-8">
+        <div class="double-red-bar mx-auto mb-4" aria-hidden="true">
+          <span></span>
+          <span></span>
+        </div>
+        <h2 class="font-display font-black text-[26px] sm:text-[32px] text-gammaGreen">
+          Peça seu orçamento
+        </h2>
+        <p class="mt-3 text-[15px] text-gammaGreen/85 leading-relaxed">
+          Envie pelo WhatsApp o bairro, o tipo de imóvel, a quantidade de quartos e banheiros e o serviço desejado (para <strong>residência</strong> ou <strong>imóvel por temporada</strong>).
+        </p>
+      </div>
+
+      <!-- Card de Orçamento Rápido -->
+      <div class="bg-white rounded-2xl p-6 sm:p-8 shadow-lg border border-gammaBlue-border">
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-5">
+          <!-- Finalidade do Imóvel -->
+          <div>
+            <label for="quoteType" class="block text-xs font-bold uppercase text-gammaGreen/80 mb-1.5">
+              1. Tipo de Atendimento
+            </label>
+            <select id="quoteType" class="w-full text-sm bg-gammaBlue-card border border-gammaBlue-border rounded-lg px-3 py-2.5 text-gammaGreen font-medium focus:outline-none focus:border-gammaRed">
+              <option value="Limpeza Residencial (Casa / Apartamento)">Residência (Manutenção / Rotina)</option>
+              <option value="Limpeza para Airbnb / Temporada">Airbnb / Imóvel por Temporada</option>
+              <option value="Turnover com Vistoria e Fotos">Turnover + Vistoria Fotográfica</option>
+              <option value="Limpeza Pesada / Pós-Mudança">Limpeza Pesada / Pós-Mudança</option>
+            </select>
+          </div>
+
+          <!-- Porte do Imóvel -->
+          <div>
+            <label for="quoteRooms" class="block text-xs font-bold uppercase text-gammaGreen/80 mb-1.5">
+              2. Quantidade de Quartos
+            </label>
+            <select id="quoteRooms" class="w-full text-sm bg-gammaBlue-card border border-gammaBlue-border rounded-lg px-3 py-2.5 text-gammaGreen font-medium focus:outline-none focus:border-gammaRed">
+              <option value="Studio / 1 Quarto" selected>Studio / 1 Quarto e Sala</option>
+              <option value="2 Quartos">2 Quartos e Sala</option>
+              <option value="3 Quartos">3 Quartos e Sala</option>
+              <option value="4 ou mais Quartos / Casa">4+ Quartos / Cobertura / Casa</option>
+            </select>
+          </div>
+
+          <!-- Bairro -->
+          <div>
+            <label for="quoteNeighborhood" class="block text-xs font-bold uppercase text-gammaGreen/80 mb-1.5">
+              3. Bairro (Rio de Janeiro)
+            </label>
+            <select id="quoteNeighborhood" class="w-full text-sm bg-gammaBlue-card border border-gammaBlue-border rounded-lg px-3 py-2.5 text-gammaGreen font-medium focus:outline-none focus:border-gammaRed">
+              <option value="Copacabana" selected>Copacabana</option>
+              <option value="Ipanema">Ipanema</option>
+              <option value="Leblon">Leblon</option>
+              <option value="Botafogo">Botafogo</option>
+              <option value="Flamengo / Catete">Flamengo / Catete</option>
+              <option value="Leme">Leme</option>
+              <option value="Lagoa / Jardim Botânico">Lagoa / Jardim Botânico</option>
+              <option value="Gávea / São Conrado">Gávea / São Conrado</option>
+              <option value="Outro bairro">Outro bairro</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="flex flex-col sm:flex-row items-center justify-between gap-4 pt-2">
+          <span class="text-xs text-gammaGreen/75">
+            Atendimento em Copacabana e toda a Zona Sul • Resposta rápida pelo WhatsApp
+          </span>
+          <button type="button" onclick="sendCustomWhatsApp()"
+                  class="w-full sm:w-auto bg-gammaRed hover:bg-gammaRed-hover text-white font-semibold text-sm py-3.5 px-8 rounded-full shadow-md hover:shadow-lg transition transform active:scale-95">
+            Solicitar orçamento no WhatsApp →
+          </button>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- =========================================================================
+       6. RODAPÉ OFICIAL COM LOGO E CONTATO
+       ========================================================================= -->
+  <footer class="w-full bg-navy text-white py-10 px-4 sm:px-10 text-center">
+    <div class="max-w-4xl mx-auto flex flex-col items-center">
+      <p class="text-gold font-bold tracking-[0.2em] text-xs uppercase">
+        HL HOUSEKEEPING COMPANY
+      </p>
+      <p class="mt-1 text-sm text-gray-300">
+        Limpeza e Organização • Residências e Imóveis por Temporada
+      </p>
+      <a href="https://wa.me/5521990235290"
+         target="_blank" rel="noopener noreferrer"
+         class="mt-3 text-lg sm:text-xl font-extrabold text-white hover:text-gold transition">
+        WhatsApp: (21) 99023-5290
+      </a>
+      <p class="mt-2 text-xs text-gray-400">
+        Base em Copacabana • Atendimento em toda a Zona Sul do Rio de Janeiro
+      </p>
+    </div>
+  </footer>
+
+  <!-- Botão Flutuante de WhatsApp -->
+  <a href="https://wa.me/5521990235290?text=Ol%C3%A1!%20Vim%20pelo%20site%20da%20HL%20Housekeeping%20Company%20e%20gostaria%20de%20um%20or%C3%A7amento."
+     target="_blank" rel="noopener noreferrer"
+     aria-label="Chamar no WhatsApp"
+     class="fixed bottom-5 right-5 z-40 bg-[#25D366] hover:bg-[#1ebe57] text-white p-3.5 rounded-full shadow-xl flex items-center justify-center transition transform hover:scale-105">
+    <svg class="w-6 h-6 fill-current" viewBox="0 0 24 24">
+      <path d="M12.031 6.172c-3.181 0-5.767 2.586-5.768 5.766-.001 1.298.38 2.27 1.019 3.287l-.582 2.128 2.182-.573c.978.58 1.911.928 3.145.929 3.178 0 5.767-2.587 5.768-5.766.001-3.187-2.575-5.77-5.764-5.771zm3.392 8.244c-.144.405-.837.774-1.17.824-.299.045-.677.063-1.092-.069-.252-.08-.575-.187-.988-.365-1.739-.751-2.874-2.502-2.961-2.617-.087-.116-.708-.94-.708-1.793s.448-1.273.607-1.446c.159-.173.346-.217.462-.217l.332.006c.106.005.249-.04.39.298.144.347.491 1.2.534 1.287.043.087.072.188.014.304-.058.116-.087.188-.173.289l-.26.304c-.087.086-.177.18-.076.354.101.174.449.741.964 1.201.662.591 1.221.774 1.394.86s.274.072.376-.043c.101-.116.433-.506.549-.68.116-.173.231-.145.39-.087s1.011.477 1.184.564.289.13.332.202c.045.072.045.419-.1.824zm-3.423-14.416c-6.627 0-12 5.373-12 12 0 2.625.846 5.059 2.284 7.033l-1.492 5.451 5.581-1.464c1.918.1254 4.212 1.98 6.677 1.98 6.627 0 12-5.373 12-12s-5.373-12-12.05-12z"/>
+    </svg>
+  </a>
+
+  <script>
+    function sendCustomWhatsApp() {
+      const serviceType = document.getElementById('quoteType').value;
+      const rooms = document.getElementById('quoteRooms').value;
+      const neighborhood = document.getElementById('quoteNeighborhood').value;
+ 
+       const msg = `Olá, HL Housekeeping Company! Gostaria de solicitar um orçamento:\n\n` +
+                  `• *Atendimento:* ${serviceType}\n` +
+                  `• *Imóvel:* ${rooms}\n` +
+                  `• *Bairro:* ${neighborhood}\n\n` +
+                  `Podemos alinhar disponibilidade e valores?`;
+
+      const url = `https://wa.me/5521990235290?text=${encodeURIComponent(msg)}`;
+      window.open(url, '_blank', 'noopener,noreferrer');
+    }
+  </script>
+</body>
+</html>
